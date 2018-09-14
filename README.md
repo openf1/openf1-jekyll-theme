@@ -46,6 +46,14 @@ Add pages, documents, data, etc. like normal to test your theme's contents. As y
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `openf1-jekyll-theme.gemspec` accordingly.
 
+### Running Tests
+
+The theme contains a minimal test suite. To run the tests, simply type:
+
+    ./script/cibuild
+
+You'll need to run `script/bootstrap` once before the test script will work.
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
