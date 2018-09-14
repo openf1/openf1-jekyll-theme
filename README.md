@@ -7,7 +7,7 @@
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "openf1-jekyll-theme"
+gem 'openf1-jekyll-theme'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -26,7 +26,7 @@ Or install it yourself as:
 
 Optionally, if you would like to preview your site on your development PC, add the following to your site's `Gemfile`:
 
-    gem "github-pages", group :jekyll_plugins
+    gem 'github-pages', group :jekyll_plugins
 
 ## Development
 
