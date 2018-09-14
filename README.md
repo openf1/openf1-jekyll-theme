@@ -50,7 +50,7 @@ To add a custom directory to your theme-gem, please edit the regexp in `openf1-j
 
 The theme contains a minimal test suite. To run the tests, simply type:
 
-    ./script/cibuild
+    script/cibuild
 
 You'll need to run `script/bootstrap` once before the test script will work.
 
