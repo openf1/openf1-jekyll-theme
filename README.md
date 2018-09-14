@@ -1,5 +1,7 @@
 # openf1-jekyll-theme
 
+[![Build Status](https://travis-ci.org/openf1/openf1-jekyll-theme.svg?branch=master)](https://travis-ci.org/openf1/openf1-jekyll-theme)
+
 `openf1-jekyll-theme` is a Jekyll theme used for [openf1's github pages](https://openf1.github.io).
 
 ## Installation
