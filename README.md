@@ -1,11 +1,6 @@
 # openf1-jekyll-theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+`openf1-jekyll-theme` is a Jekyll theme used for openf1's github pages. 
 
 ## Installation
 
@@ -29,9 +24,9 @@ Or install it yourself as:
 
     $ gem install openf1-jekyll-theme
 
-## Usage
+Optionally, if you would like to preview your site on your development PC, add the following to your site's `Gemfile`:
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+    gem "github-pages", group :jekyll_plugins
 
 ## Contributing
 
