@@ -40,10 +40,28 @@ To set up your environment to develop this theme:
 
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the previes server
+4. Run `bundle exec jekyll serve` to start the preview server
 5. Visit `localhost:4000` in your browser to preview the theme
 
 Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+To test your theme's gem directly within another Jekyll site:
+
+1. Build your gem:
+
+    gem build openf1-jekyll-theme.gemspec
+
+2. Add this line to your Jekyll's site `Gemfile`:
+
+    gem 'openf1-jekyll-theme', :path => 'path/to/your/gem'
+
+3. Add this line to your Jekyll's site `_config.yml`:
+
+    theme: openf1-jekyll-theme
+
+4. Run `bundle install` to install the gem
+5. Run `bundle exec jekyll serve` to start preview server
+6. Visit `localhost:4000` in your browser to preview the theme
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `openf1-jekyll-theme.gemspec` accordingly.
