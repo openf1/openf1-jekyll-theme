@@ -2,19 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-sm-push-6">
-        <figure style='padding-bottom: calc(300/553*100%); position: relative'><img src="/assets/images/landing/(home)/home-banner.svg" alt="Octopus Deploy is an automated deployment and release management platform" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" /></figure>
+        {% assign figure = site.data.header['figure'] %}
+        <figure style='padding-bottom: calc(300/553*100%); position: relative'>
+          <img src="{{ figure.src }}" alt="{{ figure.alt }}" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" />
+        </figure>
       </div>
       <div class="col-sm-6 col-sm-pull-6">
-        <h1>Fast, repeatable, reliable deployments</h1>
+        {% assign hero = site.data.header['hero'] %}
+        <h1>{{ hero.title }}</h1>
         <p class="hero">
-          Octopus takes over where your Continuous Integration server ends, enabling you to easily automate even the most complicated application deployments, whether on-premises or in the cloud.
+          {{ hero.text }}
         </p>
-        <p>
-          <a href="/trial" class="btn btn-success btn-border-inverse btn-lg"><i class="fa fa-cloud"></i> Try for free</a>
-          <a href="https://www.youtube.com/embed/Z77T3SHRLKE" class="btn btn-primary btn-border-inverse btn-lg" data-featherlight="iframe" data-featherlight-iframeWidth="960" data-featherlight-iframeHeight="540">
-            <i class="fa fa-play-circle fa-fw"></i>Watch video
-          </a>
-        </p>
+        {% for p in site.data.header['paragraph'] %}
+          {{ p }}
+        {% endfor %}
       </div>
     </div>
   </div>
