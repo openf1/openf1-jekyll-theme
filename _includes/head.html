@@ -1,0 +1,35 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <!-- Title -->
+  <title>{{ page.title }}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ "/assets/images/favicon.ico" | relative_url }}">
+  <link rel="apple-touch-icon" href="#" />
+
+  <!-- Core Stylesheet -->
+  <link href="{{ "/assets/main.css" | relative_url }}" rel="stylesheet">
+
+  <!-- Theme Stylesheet -->
+  <link href="{{ "/assets/theme/style.css" | relative_url }}" rel="stylesheet">
+
+  <style scoped>
+    .featherlight .featherlight-inner {
+        width: 960px;
+        height: 540px;
+    }
+    @media (max-device-width: 480px) {
+      /* define mobile specific styles come here */
+      .featherlight .featherlight-inner {
+        width: 426px;
+        height: 240px;
+      }
+    } 
+  </style>
+</head>
