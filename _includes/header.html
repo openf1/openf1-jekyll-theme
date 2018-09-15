@@ -3,9 +3,11 @@
     <div class="row">
       <div class="col-sm-6 col-sm-push-6">
         {% assign figure = site.data.header['figure'] %}
-        <figure style='padding-bottom: calc(300/553*100%); position: relative'>
-          <img src="{{ figure.src }}" alt="{{ figure.alt }}" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" />
-        </figure>
+        {% if figure != nil %}
+	  <figure style='padding-bottom: calc(300/553*100%); position: relative'>
+            <img src="{{ figure.src }}" alt="{{ figure.alt }}" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%" />
+          </figure>
+	{% endif %}
       </div>
       <div class="col-sm-6 col-sm-pull-6">
         {% assign hero = site.data.header['hero'] %}
