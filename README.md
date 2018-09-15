@@ -36,7 +36,9 @@ To set up your environment to develop this theme:
 
 1. Clone the theme's repository:
 
-    git clone https://github.com/openf1/openf1-jekyll-theme.git
+    ```
+    $ git clone https://github.com/openf1/openf1-jekyll-theme.git
+    ```
 
 2. `cd` into the theme's directory
 3. Run `script/bootstrap` to install the necessary dependencies
@@ -49,15 +51,21 @@ To test your theme's gem directly within another Jekyll site:
 
 1. Build your gem:
 
-    gem build openf1-jekyll-theme.gemspec
+    ```
+    $ gem build openf1-jekyll-theme.gemspec
+    ```
 
 2. Add this line to your Jekyll's site `Gemfile`:
 
+    ```ruby
     gem 'openf1-jekyll-theme', :path => 'path/to/your/gem'
+    ```
 
 3. Add this line to your Jekyll's site `_config.yml`:
 
+    ```yml
     theme: openf1-jekyll-theme
+    ```
 
 4. Run `bundle install` to install the gem
 5. Run `bundle exec jekyll serve` to start preview server
@@ -70,7 +78,7 @@ To add a custom directory to your theme-gem, please edit the regexp in `openf1-j
 
 The theme contains a minimal test suite. To run the tests, simply type:
 
-    script/cibuild
+    $ script/cibuild
 
 You'll need to run `script/bootstrap` once before the test script will work.
 
