@@ -28,8 +28,10 @@ Or install it yourself as:
 
 Optionally, if you would like to preview your site on your development PC, add the following to your site's `Gemfile`:
 
-```yaml
-    gem 'github-pages', group :jekyll_plugins
+```ruby
+  group :jekyll_plugins do
+    gem 'github-pages'
+  end
 ```
 
 ## Development
@@ -60,7 +62,9 @@ To test your theme's gem directly within another Jekyll site:
 2. Add this line to your Jekyll's site `Gemfile`:
 
     ```ruby
-    gem 'openf1-jekyll-theme', :path => 'path/to/your/gem'
+    path 'path/to/your/gem' do
+      gem 'openf1-jekyll-theme'
+    end
     ```
 
 3. Add this line to your Jekyll's site `_config.yml`:
@@ -71,9 +75,9 @@ To test your theme's gem directly within another Jekyll site:
 
 If you want to integrate the theme with github-pages, then you must add this line instead:
 
-    ```yaml
-    remote-theme: openf1/openf1-jekyll-theme
-    ```
+```yaml
+remote-theme: openf1/openf1-jekyll-theme
+```
 
 4. Run `bundle install` to install the gem
 5. Run `bundle exec jekyll serve` to start preview server
