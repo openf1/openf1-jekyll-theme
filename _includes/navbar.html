@@ -12,11 +12,9 @@
           <div id="navbar" class="navbar-collapse collapse">
             <div class="navbar-right">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Features</a></li>
-                <li class=""><a href="#">Docs</a></li>
-                <li class=""><a href="#">Support</a></li>
-                <li class=""><a href="#">Blog</a></li>
-                <li class=""><a href="#">About</a></li>
+              {% for link in site.data.navlinks %}
+                <li class="{% if link.active %}active{% endif %}"><a href="{{ link.url }}">{{ link.name }}</a></li>
+              {% endfor %}
               </ul>
             </div>
           </div>
@@ -25,8 +23,8 @@
               <span class="sr-only">Toggle navigation</span>
               <i class="fa fa-bars"></i>
             </button>
-            <a href="#" class="btn btn-success btn-small">Sign Up</a>
-            <a href="#" class="account">
+	    <a href="{{ site.links.signup_url }}" class="btn btn-success btn-small">Sign Up</a>
+	    <a href="{{ site.links.signin_url }}" class="account">
               <i class="fa fa-user-circle" aria-hidden="true"></i>
             </a>
             <div class="tooltip">Sign in to your openf1 Account</div>

@@ -1,42 +1,33 @@
 <footer class="stripe stripe-dark" id="footer">
   <div class="container">
     <div class="row">
+    {% for group in site.data.footlinks %}
       <div class="col-md-3">
-        <strong>openf1</strong>
+        <strong>
+        {% if group.url %}<a href="{{ group.url }}" style="color: inherit">{% endif %}
+	{{ group.title }}
+        {% if group.url %}</a>{% endif %}
+        </strong>
         <p>
-          <a href="#">About</a>
-          <br />
-          <a href="#">Roadmap</a>
-          <br />
-          <a href="#">Blog</a>
+	{% for item in group.items %}
+	  <a href="{{ item.url }}">
+	    {% if item.fa-icon %}
+              {% if item.fa-icon-color== nil %}
+	        {% assign fa-icon-color = "white" %}
+	      {% else %}
+	        {% assign fa-icon-color = item.fa-icon-color %}
+	      {% endif %}
+	      <i class="fa fa-fw fa-{{ item.fa-icon }}" style='color:{{ fa-icon-color }};'></i>
+	    {% endif %}
+	    {{ item.page }}
+          </a>
+          {% if forloop.last != true %}
+	    <br />
+	  {% endif %}
+	{% endfor %}
         </p>
       </div>
-      <div class="col-md-3">
-        <strong><a href="#" style="color: inherit">Documentation</a></strong>
-        <p>
-          <a href="#">Getting started</a>
-          <br />
-          <a href="#">GraphQL and integration</a>
-        </p>
-      </div>
-      <div class="col-md-3">
-        <strong><a href="#" style="color: inherit">Help &amp; Support</a></strong>
-        <p>
-          <a href="#" class="external">Problems</a>
-          <br />
-          <a href="#" class="external">Suggestions</a>
-        </p>
-      </div>
-      <div class="col-md-3" style="text-align: left">
-        <strong>Follow us</strong>
-        <p>
-          <a href="https://github.com/openf1"><i class="fa fa-fw fa-github" style='color: white'></i> openf1</a>
-          <!--
-          <br />
-	  <a href="https://twitter.com/openf1"><i class="fa fa-fw fa-twitter" style='color: rgb(85, 172, 238);'></i> @openf1</a>
-	  -->
-        </p>
-      </div>
+    {% endfor %}
     </div>
   </div>
 </footer>
