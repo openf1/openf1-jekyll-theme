@@ -28,7 +28,9 @@ Or install it yourself as:
 
 Optionally, if you would like to preview your site on your development PC, add the following to your site's `Gemfile`:
 
+```yaml
     gem 'github-pages', group :jekyll_plugins
+```
 
 ## Development
 
@@ -63,12 +65,13 @@ To test your theme's gem directly within another Jekyll site:
 
 3. Add this line to your Jekyll's site `_config.yml`:
 
-    ```yml
+    ```yaml
     theme: openf1-jekyll-theme
     ```
+
 If you want to integrate the theme with github-pages, then you must add this line instead:
 
-    ```yml
+    ```yaml
     remote-theme: openf1/openf1-jekyll-theme
     ```
 
@@ -93,7 +96,7 @@ You'll need to run `script/bootstrap` once before the test script will work.
 
 The items appearing in the navigation bar are generated from `_data/navlinks.yml` and is defined as:
 
- ```yml
+ ```yaml
  - name: Features
    active: true
    url: /#
@@ -103,7 +106,7 @@ The items appearing in the navigation bar are generated from `_data/navlinks.yml
 
 The home banner in the header section is composed of data from `_data/header.yml`. The `hero` and `figure`elements are defined as:
 
- ```yml
+ ```yaml
  hero:
    title: my banner heading
    text: my banner text
@@ -124,7 +127,7 @@ Every section on the site's main page is generated from `_sections/*.html` files
 
 The item groups appearing in the footer section are generated from `_data/footlinks.yml` and is defined as:
 
-```yml
+```yaml
 - title: group title
   items:
     - page: Page1
