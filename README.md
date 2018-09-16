@@ -93,26 +93,26 @@ You'll need to run `script/bootstrap` once before the test script will work.
 
 The items appearing in the navigation bar are generated from `_data/navlinks.yml` and is defined as:
 
-    ```yml
-    - name: Features
-      active: true
-      url: /#
-    ```
+ ```yml
+ - name: Features
+   active: true
+   url: /#
+ ```
 
 ### Header Section
 
 The home banner in the header section is composed of data from `_data/header.yml`. The `hero` and `figure`elements are defined as:
 
-    ```yml
-    hero:
-      title: my banner heading
-      text: my banner text
-    figure:
-      src: img_url
-      alt: img_alt
-    paragraph:
-      - <p>optional paragraph</p>
-    ``` 
+ ```yml
+ hero:
+   title: my banner heading
+   text: my banner text
+ figure:
+   src: img_url
+   alt: img_alt
+ paragraph:
+   - <p>optional paragraph</p>
+ ``` 
 
 Optionally, one or more `paragraph` elements can be defined.
 
@@ -124,7 +124,7 @@ Every section on the site's main page is generated from `_sections/*.html` files
 
 The item groups appearing in the footer section are generated from `_data/footlinks.yml` and is defined as:
 
-    ```yml
+```yml
 - title: group title
   items:
     - page: Page1
@@ -133,7 +133,7 @@ The item groups appearing in the footer section are generated from `_data/footli
       url: /#
     - page: Page3
       url: /#
-    ```
+```
 
 Each page item can have `fa-icon` and `fa-icon-color` definitions as well (optional).
 
