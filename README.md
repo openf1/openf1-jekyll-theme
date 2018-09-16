@@ -66,6 +66,11 @@ To test your theme's gem directly within another Jekyll site:
     ```yml
     theme: openf1-jekyll-theme
     ```
+If you want to integrate the theme with github-pages, then you must add this line instead:
+
+    ```yml
+    remote-theme: openf1/openf1-jekyll-theme
+    ```
 
 4. Run `bundle install` to install the gem
 5. Run `bundle exec jekyll serve` to start preview server
@@ -81,6 +86,56 @@ The theme contains a minimal test suite. To run the tests, simply type:
     $ script/cibuild
 
 You'll need to run `script/bootstrap` once before the test script will work.
+
+## Usage
+
+### Navigation Section
+
+The items appearing in the navigation bar are generated from `_data/navlinks.yml` and is defined as:
+
+    ```yml
+    - name: Features
+      active: true
+      url: /#
+    ```
+
+### Header Section
+
+The home banner in the header section is composed of data from `_data/header.yml`. The `hero` and `figure`elements are defined as:
+
+    ```yml
+    hero:
+      title: my banner heading
+      text: my banner text
+    figure:
+      src: img_url
+      alt: img_alt
+    paragraph:
+      - <p>optional paragraph</p>
+    ``` 
+
+Optionally, one or more `paragraph` elements can be defined.
+
+### Page Sections
+
+Every section on the site's main page is generated from `_sections/*.html` files. Each html file must start with a YAML front matter block.
+
+### Footer Section
+
+The item groups appearing in the footer section are generated from `_data/footlinks.yml` and is defined as:
+
+    ```yml
+- title: group title
+  items:
+    - page: Page1
+      url: /#
+    - page: Page2
+      url: /#
+    - page: Page3
+      url: /#
+    ```
+
+Each page item can have `fa-icon` and `fa-icon-color` definitions as well (optional).
 
 ## License
 
