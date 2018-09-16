@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'openf1-jekyll-theme'
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.authors       = ['Patrik Beyls']
   spec.email         = ['beylsp@yahoo']
 
